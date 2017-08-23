@@ -22,4 +22,14 @@ RSpec.describe ApplicationHelper, type: :helper do
       end
     end
   end
+
+  describe '#bootstrap_class_for' do
+    it 'deviseのflashのキーを引数として、bootstrap用のクラスの文字列を返すこと' do
+      expect(helper.bootstrap_class_for(:success)).to eq('success')
+      expect(helper.bootstrap_class_for(:error)).to eq('danger')
+      expect(helper.bootstrap_class_for(:alert)).to eq('warning')
+      expect(helper.bootstrap_class_for(:notice)).to eq('info')
+      expect(helper.bootstrap_class_for(:hoge)).to eq('hoge')
+    end
+  end
 end
