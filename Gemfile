@@ -16,6 +16,7 @@ gem 'rails', '~> 5.1.3'
 gem 'sidekiq'
 gem 'sinatra'
 gem 'therubyracer', platforms: :ruby, github: 'cowboyd/therubyracer'
+gem 'aws-sdk', '~> 2.3'
 
 # database
 gem 'mysql2', '>= 0.3.18', '< 0.5'
